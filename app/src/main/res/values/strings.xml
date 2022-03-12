@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DSM-T1-MR171621-GL202882</string>
+
+    <!-- Navigation bottom -->
+    <string name="presentation">Inicio</string>
+    <string name="equation">Ecuación</string>
+    <string name="votes">Votos</string>
+    <string name="pay">Pagos</string>
+
+    <!-- Fragments -->
+    <!-- Fragments Presentation -->
+    <string name="title">Taller Práctico - #1</string>
+    <string name="subtitle">Presentado por:</string>
+    <string name="name_one">Alejandro Javier González Loarca</string>
+    <string name="carne_one">GL202882</string>
+    <string name="name_two">José Samuel Mena Reyes</string>
+    <string name="carne_two">MR171621</string>
+    <string name="logout">Cerrar Sesión</string>
+
+</resources>

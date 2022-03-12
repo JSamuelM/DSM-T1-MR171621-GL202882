@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/presentation"
+        android:title="@string/presentation"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+
+    <item
+        android:id="@+id/equation"
+        android:title="@string/equation"
+        android:icon="@drawable/ic_baseline_info_24"
+        />
+
+    <item
+        android:id="@+id/votes"
+        android:title="@string/votes"
+        android:icon="@drawable/ic_baseline_confirmation_number_24"
+        />
+
+    <item
+        android:id="@+id/pay"
+        android:title="@string/pay"
+        android:icon="@drawable/ic_baseline_payment_24"
+        />
+</menu>
