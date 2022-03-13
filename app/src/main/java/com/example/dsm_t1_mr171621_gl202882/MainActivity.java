@@ -23,23 +23,19 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.presentation:
-                    item.setIcon(R.drawable.ic_baseline_home_24);
                     replaceFragment(new PresentationFragment());
                     break;
                 case R.id.equation:
-                    item.setIcon(R.drawable.ic_baseline_info_24);
                     replaceFragment(new FirstFragment());
                     break;
                 case R.id.votes:
-                    item.setIcon(R.drawable.ic_baseline_confirmation_number_24);
                     replaceFragment(new SecondFragment());
                     break;
                 case R.id.pay:
-                    item.setIcon(R.drawable.ic_baseline_payment_24);
                     replaceFragment(new ThirdFragment());
                     break;
             }
-            return false;
+            return true;
         });
     }
 
