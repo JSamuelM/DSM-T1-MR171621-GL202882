@@ -1,5 +1,6 @@
 package com.example.dsm_t1_mr171621_gl202882;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,9 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 public class PresentationFragment extends Fragment {
 
+    private Button btnLogout;
     public PresentationFragment() {
         // Required empty public constructor
     }
@@ -32,6 +35,14 @@ public class PresentationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_presentation, container, false);
+        View v = inflater.inflate(R.layout.fragment_presentation, container, false);
+
+        btnLogout = (Button) v.findViewById(R.id.btnLogout);
+
+        btnLogout.setOnClickListener(view -> {
+            getActivity().onBackPressed();
+        });
+
+        return v;
     }
 }

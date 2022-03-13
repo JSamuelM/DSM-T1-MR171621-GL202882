@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.dsm_t1_mr171621_gl202882.model.db.DBHelper;
@@ -14,41 +13,35 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class Login extends AppCompatActivity {
 
-    Button btnLogin, btnRegister;
-//    TextInputLayout emailLayout, passwordLayout;
-//    TextInputEditText emailEditText, passwordEditText;
+    private final AppCompatActivity activity = Login.this;
 
-    EditText emailEditText, passwordEditText;
+    private Button btnLogin;
+    private Button btnRegister;
 
-    DBHelper dbHelper;
+    private TextInputLayout emailLayout;
+    private TextInputLayout passwordLayout;
+
+    private TextInputEditText emailEditText;
+    private TextInputEditText passwordEditText;
+
+    private DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        emailLayout = (TextInputLayout)findViewById(R.id.emailLayout);
-//        passwordLayout = (TextInputLayout) findViewById(R.id.passwordLayout);
-
-//        emailEditText = (TextInputEditText) findViewById(R.id.emailEditText);
-//        passwordEditText = (TextInputEditText) findViewById(R.id.passwordEditText);
-
-        emailEditText = (EditText) findViewById(R.id.emailEditText);
-        passwordEditText = (EditText) findViewById(R.id.passwordEditText);
-
-        btnLogin = (Button)findViewById(R.id.login);
-        btnRegister = (Button)findViewById(R.id.register);
+        initViews();
+        initListeners();
+        initInstances();
 
         btnLogin.setOnClickListener(view -> {
-            String e = emailEditText.getText().toString();
-            String p = passwordEditText.getText().toString();
-
-            String m = "Datos " + e + " " + p;
-
-            Toast.makeText(this, m, Toast.LENGTH_LONG).show();
-
-            if (dbHelper.login(e, p)) {
-                Toast.makeText(this, "Datos correctos", Toast.LENGTH_LONG).show();
+            if (dbHelper.login(emailEditText.getText().toString().trim(), passwordEditText.getText().toString().trim())) {
+                Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_LONG).show();
+                emailEditText.getText().clear();
+                passwordEditText.getText().clear();
+                Intent intentMain = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intentMain);
             } else {
                 Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_LONG).show();
             }
@@ -58,5 +51,22 @@ public class Login extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), Register.class);
             startActivity(intent);
         });
+    }
+
+    private void initViews() {
+        emailLayout = (TextInputLayout)findViewById(R.id.emailLayout);
+        passwordLayout = (TextInputLayout) findViewById(R.id.passwordLayout);
+
+        emailEditText = (TextInputEditText) findViewById(R.id.emailEditText);
+        passwordEditText = (TextInputEditText) findViewById(R.id.passwordEditText);
+    }
+
+    private void initListeners() {
+        btnLogin = (Button) findViewById(R.id.login);
+        btnRegister = (Button)findViewById(R.id.register);
+    }
+
+    private void initInstances() {
+        dbHelper = new DBHelper(activity);
     }
 }

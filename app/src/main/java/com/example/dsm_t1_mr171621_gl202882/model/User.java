@@ -8,15 +8,6 @@ public class User {
     int id;
     String name, email, password;
 
-    public User() {
-    }
-
-    public User(String name, String email, String password) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
-
     public int getId() {
         return id;
     }
@@ -47,24 +38,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
-
-    public ContentValues toContentValues() {
-        ContentValues values = new ContentValues();
-        values.put(DBHelper.COLUMN_USER_ID, id);
-        values.put(DBHelper.COLUMN_USER_NAME, name);
-        values.put(DBHelper.COLUMN_USER_EMAIL, email);
-        values.put(DBHelper.COLUMN_USER_PASSWORD, password);
-        return values;
     }
 }
