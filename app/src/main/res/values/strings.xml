@@ -8,6 +8,15 @@
     <string name="pay">Pagos</string>
 
     <!-- Fragments -->
+    <!-- First Fragment -->
+    <string name="first_title">Ejercicio 1:</string>
+    <string name="first_a">a:</string>
+    <string name="first_b">b:</string>
+    <string name="first_c">c:</string>
+    <string name="first_button">Calcular</string>
+    <string name="x1">X1:</string>
+    <string name="x2">X2:</string>
+
     <!-- Fragments Presentation -->
     <string name="title">Taller Práctico - #1</string>
     <string name="subtitle">Presentado por:</string>
