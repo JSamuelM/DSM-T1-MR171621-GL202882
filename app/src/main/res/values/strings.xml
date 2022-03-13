@@ -7,6 +7,14 @@
     <string name="votes">Votos</string>
     <string name="pay">Pagos</string>
 
+    <!-- Login -->
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
+    <string name="goback">Regresar</string>
+    <string name="name">Nombre</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+
     <!-- Fragments -->
     <!-- First Fragment -->
     <string name="first_title">Ejercicio 1:</string>
