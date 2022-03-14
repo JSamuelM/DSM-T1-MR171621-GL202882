@@ -46,4 +46,13 @@
     <string name="_3">3</string>
     <string name="_4">4</string>
 
+    <!-- Fragment Ejercicio 3 -->
+    <string name="ejercicio_3_pagos">Ejercicio 3 - Pagos</string>
+    <string-array name="cargos_array">
+        <item>Gerente</item>
+        <item>Asistente</item>
+        <item>Secretaria</item>
+        <item>Otro</item>
+    </string-array>
+
 </resources>
