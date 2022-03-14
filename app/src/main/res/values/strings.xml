@@ -34,4 +34,16 @@
     <string name="carne_two">MR171621</string>
     <string name="logout">Cerrar Sesión</string>
 
+    <!-- Fragment Ejercicio 2 -->
+    <string name="ejercicio_2_title">Ejercicio 2 - Votaciones</string>
+    <string name="votaciones_entrantes">Votaciones entrantes:</string>
+    <string name="calcular_resultados">Calcular resultados</string>
+    <string name="candidato">Candidato</string>
+    <string name="votos">Votos</string>
+    <string name="porcentaje">Porcentaje</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+
 </resources>
